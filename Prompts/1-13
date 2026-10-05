@@ -1,0 +1,73 @@
+Prompt 1 – Broad Overview
+Prompt:
+What is DNA sequencing and why is identifying unknown DNA sequences important in computational biology?
+AI reply (summary):
+Explained that DNA sequencing determines the order of A, T, C, G bases. Emphasized that matching unknown sequences to reference databases (like GenBank) lets us identify species, detect pathogens, and study evolution.
+________________________________________
+Prompt 2 – BLAST Concepts
+Prompt:
+What is BLAST and how does it search local alignments in biological sequences?
+AI reply (summary):
+Described BLAST as a seed-and-extend algorithm that finds high-scoring local alignments between a query and database sequences, then computes statistical significance (E-value).
+________________________________________
+Prompt 3 – FASTA Formatting
+Prompt:
+How are query DNA sequences formatted in FASTA format for BLAST?
+AI reply (summary):
+Showed FASTA format: a header line starting with > followed by sequence lines of A/T/C/G. Gave a 70 bp example.
+________________________________________
+Prompt 4 – Application Selection
+Prompt:
+What real-world application should I select for identifying unknown bacterial species?
+AI reply (summary):
+Compared clinical diagnostics, food fraud, and environmental DNA; recommended clinical pathogen identification because of direct patient impact and clear use of 16S rRNA + BLAST.
+________________________________________
+Prompt 5 – Sub-Problem Breakdown
+Prompt:
+How can I break down my topic into 5 candidate sub-problems according to Course Step 4?
+AI reply (summary):
+Produced five sub-problems: (1) which BLAST metrics matter, (2) effect of query length, (3) effect of mutations, (4) effect of database size, (5) automating decisions with thresholds.________________________________________
+Prompt 6 – Clinical Impact
+Prompt:
+How does rapid bacterial identification using BLAST save patient lives in hospital settings?
+AI reply (summary):
+Explained that 16S rRNA sequencing + BLAST can identify sepsis-causing bacteria in hours instead of 2–3 days for culture, enabling faster, targeted antibiotics.
+________________________________________
+Prompt 7 – Metric Definitions
+Prompt:
+What specific metrics does BLAST output to prove match accuracy?
+AI reply (summary):
+Defined Percent Identity, Query Coverage, and E-value, and explained how each reflects match quality and chance.
+________________________________________
+Prompt 8 – Refined Sub-Problem
+Prompt:
+State the refined sub-problem statement in 1–2 sentences.
+AI reply (summary):
+Produced:
+“How do BLAST alignment metrics—specifically E-value, Percent Identity, and Query Coverage—differentiate an exact species match from random background alignment when identifying an unknown bacterial DNA sequence?”
+________________________________________
+Prompt 9 – Scoring Matrix Mechanics
+Prompt:
+How does BLAST calculate raw alignment scores for match, mismatch, and indels?
+AI reply (summary):
+Explained match reward (+1), mismatch penalty (−2), gap open (−5), gap extend (−2) as typical nucleotide scoring, and how these sum to a raw score S.
+________________________________________
+Prompt 10 – Karlin–Altschul Equation
+Prompt:
+What is the mathematical equation for E-value calculation in BLAST?
+AI reply (summary):
+Gave:
+E = K · m · n · e^(−λS)
+where m = query length, n = database size, S = raw score, and K, \lambda are statistical parameters.
+________________________________________
+Prompt 11 – 16S rRNA Target
+Prompt:
+Why is the 16S rRNA gene specifically targeted for identifying unknown bacteria?
+AI reply (summary):
+Explained conserved regions for universal primers and hypervariable regions (V1–V9) that distinguish species; noted widespread use in clinical and environmental microbiology.
+________________________________________
+Prompt 12 – Local vs Global Alignment
+Prompt:
+Why is local alignment (BLAST) preferred over global alignment (Needleman–Wunsch) for short DNA queries?
+AI reply (summary):
+Clarified that short reads usually match only part of a long reference genome; local alignment finds the best matching region without forcing end-to-end alignment.
