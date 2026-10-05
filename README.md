@@ -48,3 +48,29 @@ To run or replicate this analysis, ensure you have the following installed:
 ├── results/            # BLAST alignment output files / reports
 ├── scripts/            # Helper scripts for sequence parsing or formatting (if applicable)
 └── README.md           # Project documentation
+
+🔍 Step-by-Step Workflow
+Input Acquisition: Obtain the unknown nucleotide sequence in standard FASTA format.
+
+Database Selection: Choose an appropriate reference database (e.g., nt for standard nucleotide or specific organism-restricted libraries).
+
+Execution (blastn): Run the search algorithm to find high-scoring segment pairs (HSPs) between the query and database sequences.
+
+Interpretation:
+
+Max Score / Bit Score: Measures the overall quality of the alignment.
+
+E-value (Expect Value): Represents the probability of finding matches purely by chance (lower values indicate higher significance).
+
+Identity %: Indicates the exact match percentage between the query and the subject sequence.
+
+💡 Example Usage
+If executing via NCBI BLAST+ CLI:
+
+Bash
+blastn -query data/unknown_sequence.fasta -db nt -remote -out results/blast_output.txt -max_target_seqs 5 -outfmt 0
+🤝 Contributing
+Contributions, issues, and feature requests are welcome! Feel free to check out the issues page.
+
+📝 License
+This project is distributed under the MIT License. Feel free to use, modify, and build upon this work for academic or research purposes.
